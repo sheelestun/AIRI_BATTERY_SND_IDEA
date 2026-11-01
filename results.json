@@ -1,0 +1,24 @@
+{
+  "dataset": "Severson processed feature profiles; 41 train cells, 43 fixed test1 cells",
+  "operating_condition_proxy": "KMeans clusters of standardized cell-mean 99D profiles; no explicit temperature/chemistry metadata used",
+  "design": "same N=12 cells and S=12 temporal feature segments (one first window per cell); diverse=6 per each of 2 clusters; homogeneous=12 from largest cluster",
+  "cluster_sizes": [
+    19,
+    22
+  ],
+  "largest_cluster": 1,
+  "diverse": {
+    "overall_MAE_cycles": 209.8204491971207,
+    "cluster_MAE_cycles": {
+      "1": 209.8204491971207
+    }
+  },
+  "homogeneous": {
+    "overall_MAE_cycles": 206.74044089147287,
+    "cluster_MAE_cycles": {
+      "1": 206.74044089147287
+    }
+  },
+  "delta_MAE_diverse_minus_homogeneous": 3.080008305647823,
+  "limitations": "Feature-space clusters are only a surrogate for condition diversity, not known temperature/current/load metadata. All data are one LFP laboratory family; this cannot establish generalization to unseen operating conditions. One fixed draw per design makes this descriptive pilot, not a significance test."
+}
